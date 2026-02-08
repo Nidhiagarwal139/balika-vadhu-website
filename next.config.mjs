@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",   // 🔥 THIS IS THE KEY LINE
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: "export",
+
+  basePath: "/balika-vadhu-website",
+  assetPrefix: "/balika-vadhu-website/",
+
   images: {
     unoptimized: true,
   },
-  basePath: "/balika-vadhu-website",
-  assetPrefix: "/balika-vadhu-website/",
+
+  trailingSlash: true,   // 🔥 VERY IMPORTANT for GitHub Pages
 };
 
 export default nextConfig;
+
 
